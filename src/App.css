@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f6f2e7;
+}
+.flex{
+    display: flex;
+    align-items: center;    
+}
+#app_root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#header{
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+#main{
+    width: 100%;
+}
+#sidebar{
+    width: 15%;
+    height: 600px;
+}
+#section{
+    width: 15%;
+    height: 600px;
+}
+#content{
+    width: 70%;
+}
+#search{
+    width: 100%;
+}
+#result{
+    width: 100%;
+}
+#product{
+    
+}
+#footer{
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
