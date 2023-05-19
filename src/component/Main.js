@@ -59,7 +59,7 @@ function Main() {
         
         let requestList = [] // 商品請求列表
         if (checkMomo === true) {
-            let momoRequest = fetch('/search/momo/keyword=' + searchKeyword).then((d) => d.json()).then((d) => {
+            let momoRequest = fetch('http://192.168.1.194:3000/search/momo/keyword=' + searchKeyword).then((d) => d.json()).then((d) => {
                 d["Product"].forEach((dd) => {
                     data["Product"].push(dd)
                 })
@@ -67,7 +67,7 @@ function Main() {
             requestList.push(momoRequest)
         }
         if (checkPChome === true) {
-            let pchomeRequest = fetch('/search/pchome/keyword=' + searchKeyword).then((d) => d.json()).then((d) => {
+            let pchomeRequest = fetch('http://192.168.1.194:3000/search/pchome/keyword=' + searchKeyword).then((d) => d.json()).then((d) => {
                 d["Product"].forEach((dd) => {
                     data["Product"].push(dd)
                 })
@@ -75,7 +75,7 @@ function Main() {
             requestList.push(pchomeRequest)
         }
         if (checkYahoo === true) {
-            let yahooRequest = fetch('/search/yahoo/keyword=' + searchKeyword).then((d) => d.json()).then((d) => {
+            let yahooRequest = fetch('http://192.168.1.194:3000/search/yahoo/keyword=' + searchKeyword).then((d) => d.json()).then((d) => {
                 d["Product"].forEach((dd) => {
                     data["Product"].push(dd)
                 })
