@@ -3,7 +3,7 @@ function Header() {
     <div id="header">
         <div className="header_root flex">
             <img className="header_item_img_icon" src="/asset/icon.png" alt="icon"/>
-            <p className="header_item_name">第三組</p>
+            <p className="header_item_name">ProductCrawler</p>
             <div className="header_item_div"></div>
             <img className="header_item_img_user" src="/asset/user.png" alt="user"/>
             <button className="header_item_login">登入</button>
