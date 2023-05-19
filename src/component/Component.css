@@ -112,6 +112,9 @@
 .section_item_img_money{
     height: 25px;
 }
+.section_item_img_sort{
+    height: 25px;
+}
 .section_price_item{
     flex-wrap: wrap;
     justify-content: center;
@@ -210,9 +213,6 @@
     width: 10%;
     height: 50px;
 }
-.footer_item_team{
-    width: 5%;
-}
-.footer_item_member{
-    width: 7.5%;
+.footer_item{
+    padding-right: 50px;
 }

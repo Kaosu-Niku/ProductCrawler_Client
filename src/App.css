@@ -26,11 +26,9 @@ body{
 }
 #sidebar{
     width: 15%;
-    height: 600px;
 }
 #section{
     width: 15%;
-    height: 600px;
 }
 #content{
     width: 70%;
@@ -45,6 +43,8 @@ body{
     
 }
 #footer{
+    position: fixed;
+    bottom: 0;
     width: 100%;
     border-style: solid;
     border-color: black;
