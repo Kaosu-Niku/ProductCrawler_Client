@@ -55,13 +55,6 @@ function Section({setting}) {
                 <input className="section_shop_item_input" checked={setting.sort === 2} type="radio" name="sort" onChange={(event) => { setting.setSort(2) }}></input>
                 <p className="section_shop_item_text">價格由高至低</p>
             </div>
-            <div className="section_shop_item flex">
-                <h2 className="section_item_h2">測試用</h2>
-            </div>
-            <div className="section_shop_item flex">
-                <input className="section_shop_item_input" checked={setting.test} type="checkbox" onChange={(event) => { setting.setTest(event.target.checked); }}></input>
-                <p className="section_shop_item_text">此選項為固定的商品表單，方便察看與測試</p>
-            </div>
             <div className="section_item_div"></div>       
         </div>
     </div>

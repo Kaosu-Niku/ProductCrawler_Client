@@ -29,7 +29,6 @@ function Main() {
     const [lowPrice, setLowPrice] = useState(0)
     const [highPrice, setHighPrice] = useState(1000)
     const [sort, setSort] = useState(0) // 類型為int 0:不排序 1:價格低到高 2:價格高到低
-    const [test, setTest] = useState(false) //! 測試用
     let setting = {
         checkMomo: checkMomo,
         setCheckMomo: setCheckMomo,
@@ -43,8 +42,6 @@ function Main() {
         setHighPrice: setHighPrice,
         sort: sort,
         setSort: setSort,
-        test: test, //! 測試用
-        setTest: setTest //! 測試用
     }
     //todo 頁面主體對照JSX元件
     let content = [
@@ -81,35 +78,6 @@ function Main() {
                 })
             })
             requestList.push(yahooRequest)
-        }
-        if(test === true) { //! 測試用
-            data = {
-                "Product":[
-                    {
-                        "ProductShop": 'test',
-                        "ProductName": 'product01',
-                        "ProductPrice": 1000,
-                        "ProductLink": 'http://.com/product01',
-                        "ProductImage": 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Solid_red.svg/512px-Solid_red.svg.png?20150316143248'
-                    },
-                    {
-                        "ProductShop": 'test',
-                        "ProductName": 'product02',
-                        "ProductPrice": 800,
-                        "ProductLink": 'http://.com/product02',
-                        "ProductImage": 'https://cdn11.bigcommerce.com/s-3uewkq06zr/images/stencil/1280x1280/products/146/385/lemon_yellow__63669.1494606073.png?c=2'
-                    },
-                    {
-                        "ProductShop": 'test',
-                        "ProductName": 'product03',
-                        "ProductPrice": 900,
-                        "ProductLink": 'http://.com/product02',
-                        "ProductImage": 'https://www.travelandleisure.com/thmb/KTIha5CLifSoUD3gx0YP51xc3rY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/blue0517-4dfc85cb0200460ab717b101ac07888f.jpg'
-                    }
-                ]
-            }
-            let newData = filterProductData(data)
-            setProductData(newData)
         }
         // 在發送所有的request後，等待所有的response都回傳後才執行過濾商品資料的動作
         Promise.all(requestList).then((a) => {

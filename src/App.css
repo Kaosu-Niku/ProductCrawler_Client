@@ -39,11 +39,7 @@ body{
 #result{
     width: 100%;
 }
-#product{
-    
-}
 #footer{
-    position: fixed;
     bottom: 0;
     width: 100%;
     border-style: solid;
