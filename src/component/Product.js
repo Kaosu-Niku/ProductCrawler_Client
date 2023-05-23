@@ -24,10 +24,10 @@ function Product({productData,favorite}) {
                     <p className="product_shop">{productData["productShop"]}</p>
                     <p className="product_name">{productData["productName"]}</p>
                     <div className="product_price_flex flex">
-                        <p>{'價格$'}</p>
-                        <p>{productData["productPrice"]}</p>
+                        <p className='product_price_text'>{'價格 $'}</p>
+                        <p className='product_price_text'>{productData["productPrice"]}</p>
                     </div>
-                    <a href={productData["productLink"]} target="_blank" rel="noreferrer">{'商品連結'}</a>
+                    <a className='product_link' href={productData["productLink"]} target="_blank" rel="noreferrer">{'商品連結'}</a>
                 </div>
                 <div className="product_favorite_position">
                     <button className="product_favorite" onClick={() => { 

@@ -179,22 +179,36 @@
     border-color: black;
     border-width: 2px;
 }
+.product_shop{
+    font-size: 20px;
+    font-weight: 1000;
+}
 .product_name{
     width: 80%;
-    height: 70px;
+    height: 60px;
     overflow: hidden;
     text-align: center;
+    font-size: 15px;
+    font-weight: 600;
 }
 .product_price_flex{
     flex-direction: row;
     justify-content: center;
+}
+.product_price_text{
+    font-size: 18px;
+    font-weight: 800;
+}
+.product_link{
+    font-size: 15px;
+    font-weight: 400;
 }
 .product_favorite_position{
     position: relative;
 }
 .product_favorite{
     position: absolute;
-    top: -295px;
+    top: -275px;
     right: 25px;
     width: 25px;
     height: 25px;
