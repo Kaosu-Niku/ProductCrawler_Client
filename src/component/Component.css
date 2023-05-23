@@ -194,12 +194,12 @@
 }
 .product_favorite{
     position: absolute;
-    top: -275px;
+    top: -295px;
     right: 25px;
     width: 25px;
     height: 25px;
     border-width: 0;
-    background-color: transparent;
+    background-color: white;
 }
 .product_favorite_img{
     justify-content: center;

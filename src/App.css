@@ -19,13 +19,15 @@ body{
     width: 100%;
     border-style: solid;
     border-color: black;
-    border-width: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
 }
 #main{
     width: 100%;
 }
 #sidebar{
     width: 15%;
+    height: 800px;
 }
 #section{
     width: 15%;
@@ -44,5 +46,6 @@ body{
     width: 100%;
     border-style: solid;
     border-color: black;
-    border-width: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
 }
