@@ -33,11 +33,8 @@ function Section({setting}) {
             <div className="section_price_item flex">
                 <p> $ </p>
                 <input className="section_price_item_input" type="number" value={setting.lowPrice} onChange={(event) => { setting.setLowPrice(Number(event.target.value)); }}></input>
-                <p> 元 </p>
                 <p> ~ </p>
-                <p> $ </p>
                 <input className="section_price_item_input" type="number" value={setting.highPrice} onChange={(event) => { setting.setHighPrice(Number(event.target.value));  }}></input>
-                <p> 元 </p>
             </div> 
             <div className="section_shop_item flex">
                 <img className="section_item_img_sort" src="/asset/sort.png" alt="sort"/>
