@@ -43,15 +43,19 @@ function Main() {
         sort: sort,
         setSort: setSort,
     }
+    //todo 搜尋中提示文字
+    const [hintText, setHintText] = useState(null)
     //todo 頁面主體對照JSX元件
     let content = [
-        <><Search search={requestProductData} /><Result data={productData} favorite={favorite} /></>,
+        <><Search search={requestProductData} /><p className="content_hint_text">{ hintText }</p><Result data={productData} favorite={favorite} /></>,
         <><Favorite favorite={favorite} /></>
     ]
     //todo 與伺服器請求商品資訊(json格式)(參數填入欲搜索的商品名稱)
-    // 該方法需傳遞給Search元件，Search元件改變值，實現搜尋功能
+    // 該方法需傳遞給Search元件，Search元件改變值，實現搜尋功能，顯示搜尋中提示
     function requestProductData(searchKeyword) {
         
+        setHintText('搜尋中，請耐心等待...') //顯示提示文字
+
         let data = { "Product": [] } //商品資訊範例
         
         let requestList = [] // 商品請求列表
@@ -81,6 +85,7 @@ function Main() {
         }
         // 在發送所有的request後，等待所有的response都回傳後才執行過濾商品資料的動作
         Promise.all(requestList).then((a) => {
+            setHintText(null)
             let newData = filterProductData(data)
             setProductData(newData)
         })
